@@ -36,7 +36,7 @@
     </script>
 
     <style>
-        /* Force Single Page Scroll & Remove Dual Scrollbars */
+        /* Force Native Mobile Momentum Scrolling */
         html, body {
             background-color: #03050c;
             background-image: 
@@ -47,8 +47,7 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             width: 100%;
-            -webkit-overflow-scrolling: touch;
-            overscroll-behavior-y: none;
+            -webkit-overflow-scrolling: touch; /* Enables buttery smooth native mobile scroll */
         }
 
         /* Hide all scrollbars across browsers */
@@ -658,25 +657,28 @@
     </div>
 
     <script>
-        // 1. Initialize Lenis Smooth Scroll optimized for lightning-fast touch response
-        const lenis = new Lenis({
-            duration: 0.8,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            direction: 'vertical',
-            smoothTouch: true,
-            touchMultiplier: 1.8,
-            wheelMultiplier: 1.2
-        });
+        // Initialize Lenis Smooth Scroll ONLY on Desktop (Disables mobile scroll interference entirely)
+        let lenis = null;
+        if (window.innerWidth > 768) {
+            lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                smoothTouch: false
+            });
 
-        function raf(time) {
-            lenis.raf(time);
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
             requestAnimationFrame(raf);
+            
+            gsap.registerPlugin(ScrollTrigger);
+            lenis.on('scroll', ScrollTrigger.update);
+        } else {
+            // For Mobile: Use lightning-fast native GSAP ScrollTrigger without Lenis overhead
+            gsap.registerPlugin(ScrollTrigger);
         }
-        requestAnimationFrame(raf);
-
-        // 2. GSAP ScrollTrigger Integration with Lenis
-        gsap.registerPlugin(ScrollTrigger);
-        lenis.on('scroll', ScrollTrigger.update);
 
         document.addEventListener("DOMContentLoaded", () => {
             
