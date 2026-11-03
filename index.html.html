@@ -47,6 +47,8 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             width: 100%;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-y: none;
         }
 
         /* Hide all scrollbars across browsers */
@@ -93,6 +95,7 @@
             box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
             border-radius: 2rem; transform-style: preserve-3d;
             position: relative; overflow: hidden;
+            will-change: transform, opacity;
         }
 
         .glare {
@@ -212,7 +215,7 @@
         </nav>
     </div>
 
-    <!-- SECTION 01: Hero (Fully Responsive & Scaled Name) -->
+    <!-- SECTION 01: Hero -->
     <section id="about" class="relative z-10 flex items-center justify-center min-h-screen px-3 sm:px-6 pt-24 pb-12">
         <div class="vision-glass tilt-card p-5 sm:p-10 md:p-16 max-w-4xl w-full text-center gs-reveal flex flex-col items-center">
             <div class="glare"></div>
@@ -221,7 +224,6 @@
                 <i class="fa-solid fa-location-dot text-appleBlue animate-pulse"></i> Bengaluru, Karnataka <span class="text-white/20">|</span> +91 8050025064
             </div>
 
-            <!-- Responsive Scaling Name (Fits both mobile screens and PCs cleanly) -->
             <h1 class="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-3 sm:mb-4 text-gradient relative z-20 text-center w-full break-words">
                 K Joice Raj
             </h1>
@@ -312,7 +314,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
             <!-- Project 1 -->
             <div class="vision-glass tilt-card p-5 sm:p-8 flex flex-col h-full gs-reveal group">
                 <div class="glare"></div>
@@ -388,7 +389,6 @@
                     <span class="tech-badge">HTML/CSS</span>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -470,7 +470,6 @@
     <!-- SECTION 05: Credentials & Education -->
     <section id="credentials" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             <!-- Education -->
             <div class="gs-reveal">
                 <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">04. Education</h3>
@@ -526,7 +525,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -660,13 +658,14 @@
     </div>
 
     <script>
-        // 1. Initialize Lenis Smooth Scroll with mobile touch smoothing enabled
+        // 1. Initialize Lenis Smooth Scroll optimized for lightning-fast touch response
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 0.8,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             smoothTouch: true,
-            touchMultiplier: 1.5
+            touchMultiplier: 1.8,
+            wheelMultiplier: 1.2
         });
 
         function raf(time) {
@@ -684,13 +683,13 @@
             // Un-blur and Scale-Up Reveal Transitions for Scroll
             gsap.utils.toArray('.gs-reveal').forEach((el) => {
                 gsap.fromTo(el, 
-                    { opacity: 0, y: 40, scale: 0.97, filter: "blur(8px)" },
+                    { opacity: 0, y: 30, scale: 0.98, filter: "blur(6px)" },
                     {
                         opacity: 1, y: 0, scale: 1, filter: "blur(0px)",
-                        duration: 0.9, ease: "power3.out",
+                        duration: 0.8, ease: "power3.out",
                         scrollTrigger: {
                             trigger: el,
-                            start: "top 90%",
+                            start: "top 92%",
                             end: "top 20%",
                             toggleActions: "play none none reverse"
                         }
@@ -698,7 +697,7 @@
                 );
             });
 
-            // 3D Card Tilt Effect (Only active on desktop pointers to prevent mobile glitches)
+            // 3D Card Tilt Effect (Only active on desktop pointers)
             if (window.matchMedia("(hover: hover)").matches) {
                 const cards = document.querySelectorAll('.tilt-card');
                 cards.forEach(card => {
@@ -749,7 +748,7 @@
             } else if (type === 'infra') {
                 output.innerHTML = "<strong>INFRASTRUCTURE PROFILE:</strong> Experienced in TCP/IP, DNS, DHCP, Routing & Switching. Daily hands-on utilization of enterprise suites including G-Designer, Remedy, Force, and Citrix platforms for provisioning and service delivery.";
             } else if (type === 'projects') {
-                output.innerHTML = "<strong>PROJECT HIGHLIGHTS:</strong><br>• <em>QR Attendance App:</em> Firebase DB real-time web application.<br>• <em>PMO Dashboard:</em> Power Query, custom VBA macros, TAT metric analytics.<br>• <i>APEX Tool:</i> Open-source AI generative image rendering tool.";
+                output.innerHTML = "<strong>PROJECT HIGHLIGHTS:</strong><br>• <em>QR Attendance App:</em> Firebase DB real-time web application.<br>• <em>PMO Dashboard:</em> Power Query, custom VBA macros, TAT metric analytics.<br>• <em>APEX Tool:</em> Open-source AI generative image rendering tool.";
             } else if (type === 'dispatch') {
                 output.innerHTML = "<strong>CONTACT DISPATCH:</strong><br>• Direct Email: <a href='mailto:joiceraj25@gmail.com' class='text-appleBlue underline'>joiceraj25@gmail.com</a><br>• Phone: +91 8050025064<br>• Links: Available in the footer dock.";
             }
