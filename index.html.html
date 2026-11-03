@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portfolio</title>
     
     <!-- URL / Browser Tab Favicon -->
@@ -104,7 +104,7 @@
 
         /* Floating Capsule Navigation Bar */
         .vision-nav {
-            background: rgba(15, 20, 35, 0.65); backdrop-filter: blur(35px);
+            background: rgba(15, 20, 35, 0.75); backdrop-filter: blur(35px);
             -webkit-backdrop-filter: blur(35px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -194,55 +194,54 @@
     </div>
 
     <!-- Floating Capsule Navigation Bar -->
-    <div class="fixed w-full z-50 top-4 px-4 flex justify-center">
-        <nav class="vision-nav w-full max-w-5xl py-2 px-5 md:px-6 rounded-full flex justify-between items-center">
+    <div class="fixed w-full z-50 top-3 px-3 flex justify-center">
+        <nav class="vision-nav w-full max-w-5xl py-2 px-4 md:px-6 rounded-full flex justify-between items-center">
             <!-- Logo Lockup -->
             <div class="flex items-center gap-2 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <img src="KJR.png" alt="KJR Logo" class="h-7 md:h-8 w-auto object-contain drop-shadow-[0_0_12px_rgba(10,132,255,0.6)] group-hover:scale-105 transition-transform duration-300">
+                <img src="KJR.png" alt="KJR Logo" class="h-6 sm:h-7 md:h-8 w-auto object-contain drop-shadow-[0_0_12px_rgba(10,132,255,0.6)] group-hover:scale-105 transition-transform duration-300">
             </div>
 
             <!-- Capsule Navigation Links -->
-            <div class="hidden md:flex gap-1.5 text-xs font-medium text-gray-300">
-                <a href="#about" class="nav-link px-3.5 py-1.5 rounded-full hover:text-white">About</a>
-                <a href="#experience" class="nav-link px-3.5 py-1.5 rounded-full hover:text-white">Experience</a>
-                <a href="#projects" class="nav-link px-3.5 py-1.5 rounded-full hover:text-white">Architecture</a>
-                <a href="#skills" class="nav-link px-3.5 py-1.5 rounded-full hover:text-white">Skills</a>
-                <a href="#credentials" class="nav-link px-3.5 py-1.5 rounded-full hover:text-white">Credentials</a>
-                <a href="#contact" class="nav-link px-3.5 py-1.5 rounded-full text-appleBlue hover:text-white bg-appleBlue/10 border-appleBlue/30">Contact</a>
+            <div class="flex gap-1 text-[11px] sm:text-xs font-medium text-gray-300 overflow-x-auto py-1">
+                <a href="#about" class="nav-link px-2.5 sm:px-3.5 py-1.5 rounded-full hover:text-white whitespace-nowrap">About</a>
+                <a href="#experience" class="nav-link px-2.5 sm:px-3.5 py-1.5 rounded-full hover:text-white whitespace-nowrap">Experience</a>
+                <a href="#projects" class="nav-link px-2.5 sm:px-3.5 py-1.5 rounded-full hover:text-white whitespace-nowrap">Projects</a>
+                <a href="#skills" class="nav-link px-2.5 sm:px-3.5 py-1.5 rounded-full hover:text-white whitespace-nowrap">Skills</a>
+                <a href="#contact" class="nav-link px-2.5 sm:px-3.5 py-1.5 rounded-full text-appleBlue hover:text-white bg-appleBlue/10 border-appleBlue/30 whitespace-nowrap">Contact</a>
             </div>
         </nav>
     </div>
 
-    <!-- SECTION 01: Hero (Centered Name & Responsive Alignment) -->
-    <section id="about" class="relative z-10 flex items-center justify-center min-h-screen px-4 md:px-6 pt-24 pb-12">
-        <div class="vision-glass tilt-card p-6 sm:p-10 md:p-16 max-w-4xl w-full text-center gs-reveal flex flex-col items-center">
+    <!-- SECTION 01: Hero (Fully Responsive & Scaled Name) -->
+    <section id="about" class="relative z-10 flex items-center justify-center min-h-screen px-3 sm:px-6 pt-24 pb-12">
+        <div class="vision-glass tilt-card p-5 sm:p-10 md:p-16 max-w-4xl w-full text-center gs-reveal flex flex-col items-center">
             <div class="glare"></div>
             
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 border border-white/10 text-xs font-medium tracking-wide text-gray-300 mb-8 shadow-inner hover:border-appleBlue/40 transition-colors cursor-default relative z-20">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-white/10 text-[11px] sm:text-xs font-medium tracking-wide text-gray-300 mb-6 sm:mb-8 shadow-inner hover:border-appleBlue/40 transition-colors cursor-default relative z-20">
                 <i class="fa-solid fa-location-dot text-appleBlue animate-pulse"></i> Bengaluru, Karnataka <span class="text-white/20">|</span> +91 8050025064
             </div>
 
-            <!-- Fully Centered, Non-Breaking Name Title -->
-            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-gradient relative z-20 whitespace-nowrap text-center w-full">
+            <!-- Responsive Scaling Name (Fits both mobile screens and PCs cleanly) -->
+            <h1 class="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-3 sm:mb-4 text-gradient relative z-20 text-center w-full break-words">
                 K Joice Raj
             </h1>
 
-            <h2 class="text-lg sm:text-xl md:text-2xl font-medium text-appleBlue mb-6 tracking-wide relative z-20 text-center w-full leading-snug">
+            <h2 class="text-sm sm:text-xl md:text-2xl font-medium text-appleBlue mb-5 sm:mb-6 tracking-wide relative z-20 text-center w-full leading-snug">
                 Network Operations & Solution Delivery Professional
             </h2>
 
-            <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10 text-sm sm:text-base md:text-lg font-light relative z-20 text-center">
+            <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 text-xs sm:text-base md:text-lg font-light relative z-20 text-center">
                 Network Operations professional with hands-on experience in network provisioning, LAN/WAN connectivity, service delivery, and enterprise network infrastructure coordination. Strong foundation in TCP/IP, DNS, DHCP, routing, and switching—bridging infrastructure reliability with modern frontend web application development.
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 w-full sm:w-auto">
-                <a href="#projects" class="btn-ios px-8 py-3.5 rounded-full font-semibold tracking-wide flex items-center justify-center gap-2 shadow-lg">
+            <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 relative z-20 w-full sm:w-auto">
+                <a href="#projects" class="btn-ios px-6 sm:px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold tracking-wide flex items-center justify-center gap-2 shadow-lg">
                     Explore Architecture <i class="fa-solid fa-arrow-right text-sm"></i>
                 </a>
-                <a href="K_Joice_Raj_Resume.pdf" download class="btn-glass px-8 py-3.5 rounded-full text-white font-semibold flex items-center justify-center gap-2">
+                <a href="K_Joice_Raj_Resume.pdf" download class="btn-glass px-6 sm:px-8 py-3.5 rounded-full text-white text-sm sm:text-base font-semibold flex items-center justify-center gap-2">
                     <i class="fa-solid fa-file-pdf text-appleBlue"></i> Download Resume
                 </a>
-                <button onclick="toggleNeuralHUD()" class="btn-glass px-6 py-3.5 rounded-full text-appleBlue font-semibold flex items-center justify-center gap-2 border-appleBlue/40">
+                <button onclick="toggleNeuralHUD()" class="btn-glass px-6 py-3.5 rounded-full text-appleBlue text-sm sm:text-base font-semibold flex items-center justify-center gap-2 border-appleBlue/40">
                     <i class="fa-solid fa-brain"></i> Neural Pitch AI
                 </button>
             </div>
@@ -250,26 +249,26 @@
     </section>
 
     <!-- SECTION 02: Career Experience -->
-    <section id="experience" class="relative z-10 py-24 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-20">
-        <div class="mb-12 gs-reveal">
-            <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">01. Experience</h3>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gradient">Work History</h2>
+    <section id="experience" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
+        <div class="mb-8 sm:mb-12 gs-reveal">
+            <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">01. Experience</h3>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient">Work History</h2>
         </div>
 
-        <div class="vision-glass tilt-card p-6 sm:p-8 md:p-12 w-full gs-reveal">
+        <div class="vision-glass tilt-card p-5 sm:p-8 md:p-12 w-full gs-reveal">
             <div class="glare"></div>
             <div class="relative z-20">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 pb-6 border-b border-white/10">
                     <div>
-                        <h3 class="text-2xl font-bold text-white tracking-tight">Network Operations Representative</h3>
-                        <p class="text-appleBlue text-lg font-medium mt-1">2COMS Consulting Pvt Ltd <span class="text-gray-400 font-normal">(Working for Accenture Solutions Pvt Ltd)</span></p>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Network Operations Representative</h3>
+                        <p class="text-appleBlue text-base sm:text-lg font-medium mt-1">2COMS Consulting Pvt Ltd <span class="text-gray-400 font-normal block sm:inline">(Working for Accenture Solutions Pvt Ltd)</span></p>
                     </div>
-                    <div class="mt-3 md:mt-0 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300">
+                    <div class="mt-3 md:mt-0 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium text-gray-300">
                         March 2025 – Present <span class="text-white/30">|</span> Bengaluru, KA
                     </div>
                 </div>
                 
-                <div class="space-y-4 text-gray-300 font-light leading-relaxed">
+                <div class="space-y-4 text-gray-300 text-xs sm:text-sm md:text-base font-light leading-relaxed">
                     <p class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-appleBlue mt-1.5 text-sm shrink-0"></i>
                         <span><strong>Enterprise Provisioning & Delivery:</strong> Manage end-to-end network provisioning and service delivery activities for enterprise connectivity requirements across client domains.</span>
@@ -306,23 +305,23 @@
     </section>
 
     <!-- SECTION 03: Projects Showcase -->
-    <section id="projects" class="relative z-10 py-24 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-20">
-        <div class="mb-12 gs-reveal">
-            <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">02. Engineering</h3>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gradient">Technical Projects</h2>
+    <section id="projects" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
+        <div class="mb-8 sm:mb-12 gs-reveal">
+            <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">02. Engineering</h3>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient">Technical Projects</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <!-- Project 1 -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 flex flex-col h-full gs-reveal group">
+            <div class="vision-glass tilt-card p-5 sm:p-8 flex flex-col h-full gs-reveal group">
                 <div class="glare"></div>
                 <div class="flex-grow relative z-20">
                     <div class="w-12 h-12 rounded-xl bg-appleBlue/20 flex items-center justify-center text-appleBlue mb-6 border border-appleBlue/30 group-hover:scale-110 group-hover:bg-appleBlue group-hover:text-white transition-all">
                         <i class="fa-solid fa-qrcode text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Attendance Web Application</h3>
-                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Attendance Web Application</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-xs sm:text-sm">
                         Engineered a single-file attendance tracking web application integrated with HTML5 QR code scanning, Firebase Realtime Database check-ins, dynamic live logs, and an admin panel.
                     </p>
                 </div>
@@ -334,14 +333,14 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 flex flex-col h-full gs-reveal group">
+            <div class="vision-glass tilt-card p-5 sm:p-8 flex flex-col h-full gs-reveal group">
                 <div class="glare"></div>
                 <div class="flex-grow relative z-20">
                     <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6 border border-purple-500/30 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all">
                         <i class="fa-solid fa-chart-line text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">PMO Data & Analytics Dashboard</h3>
-                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">PMO Data & Analytics Dashboard</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-xs sm:text-sm">
                         Designed PMO reporting dashboards in Microsoft Excel using Power Query data transformations, turnaround time (TAT) metric formulas, slicers, and custom VBA macros for automated refresh.
                     </p>
                 </div>
@@ -353,14 +352,14 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 flex flex-col h-full gs-reveal group">
+            <div class="vision-glass tilt-card p-5 sm:p-8 flex flex-col h-full gs-reveal group">
                 <div class="glare"></div>
                 <div class="flex-grow relative z-20">
                     <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 border border-emerald-500/30 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all">
                         <i class="fa-solid fa-robot text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">APEX - AI Image Generator</h3>
-                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">APEX - AI Image Generator</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-xs sm:text-sm">
                         Developed an AI-powered visual generation application using open-source API integrations, allowing users to render graphics dynamically from natural language prompts.
                     </p>
                 </div>
@@ -372,14 +371,14 @@
             </div>
 
             <!-- Project 4 -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 flex flex-col h-full gs-reveal group">
+            <div class="vision-glass tilt-card p-5 sm:p-8 flex flex-col h-full gs-reveal group">
                 <div class="glare"></div>
                 <div class="flex-grow relative z-20">
                     <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 mb-6 border border-orange-500/30 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all">
                         <i class="fa-solid fa-laptop-code text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Department Web & Python Utilities</h3>
-                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Department Web & Python Utilities</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-6 text-xs sm:text-sm">
                         Collaborated on a responsive academic department portal using standard web technologies, and created a Python Tkinter desktop GUI utility for automated health metric calculations.
                     </p>
                 </div>
@@ -394,17 +393,17 @@
     </section>
 
     <!-- SECTION 04: Technical Skills Matrix -->
-    <section id="skills" class="relative z-10 py-24 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-20">
-        <div class="mb-12 gs-reveal">
-            <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">03. Capabilities</h3>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gradient">Skill Matrix</h2>
+    <section id="skills" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
+        <div class="mb-8 sm:mb-12 gs-reveal">
+            <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">03. Capabilities</h3>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient">Skill Matrix</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Networking & Infrastructure -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 md:col-span-2 gs-reveal">
+            <div class="vision-glass tilt-card p-5 sm:p-8 md:col-span-2 gs-reveal">
                 <div class="glare"></div>
-                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
                     <i class="fa-solid fa-network-wired text-appleBlue"></i> Networking & Infrastructure
                 </h3>
                 <div class="flex flex-wrap gap-2.5 relative z-20">
@@ -419,9 +418,9 @@
             </div>
 
             <!-- Soft Skills -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 gs-reveal">
+            <div class="vision-glass tilt-card p-5 sm:p-8 gs-reveal">
                 <div class="glare"></div>
-                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
                     <i class="fa-solid fa-user-check text-emerald-400"></i> Soft Skills
                 </h3>
                 <div class="flex flex-wrap gap-2 relative z-20">
@@ -435,9 +434,9 @@
             </div>
 
             <!-- Software & Web -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 gs-reveal">
+            <div class="vision-glass tilt-card p-5 sm:p-8 gs-reveal">
                 <div class="glare"></div>
-                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
                     <i class="fa-solid fa-code text-purple-400"></i> Programming & Web
                 </h3>
                 <div class="flex flex-wrap gap-2 relative z-20">
@@ -450,9 +449,9 @@
             </div>
 
             <!-- Enterprise Tools -->
-            <div class="vision-glass tilt-card p-6 sm:p-8 md:col-span-2 gs-reveal">
+            <div class="vision-glass tilt-card p-5 sm:p-8 md:col-span-2 gs-reveal">
                 <div class="glare"></div>
-                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-20">
                     <i class="fa-solid fa-sliders text-orange-400"></i> Enterprise Platforms & Analytics
                 </h3>
                 <div class="flex flex-wrap gap-2.5 relative z-20">
@@ -469,37 +468,37 @@
     </section>
 
     <!-- SECTION 05: Credentials & Education -->
-    <section id="credentials" class="relative z-10 py-24 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-20">
+    <section id="credentials" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             <!-- Education -->
             <div class="gs-reveal">
-                <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">04. Education</h3>
-                <h2 class="text-3xl font-bold tracking-tight text-gradient mb-8">Academic Qualifications</h2>
+                <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">04. Education</h3>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gradient mb-8">Academic Qualifications</h2>
                 
                 <div class="space-y-6">
-                    <div class="vision-glass p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-white">Bachelor of Computer Applications (BCA)</h4>
+                    <div class="vision-glass p-5 sm:p-6">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
+                            <h4 class="text-lg sm:text-xl font-bold text-white">Bachelor of Computer Applications (BCA)</h4>
                             <span class="text-xs px-3 py-1 bg-appleBlue/20 text-appleBlue rounded-full font-semibold">2021 - 2024</span>
                         </div>
-                        <p class="text-gray-300 text-sm">REVA University, Bengaluru</p>
+                        <p class="text-gray-300 text-xs sm:text-sm">REVA University, Bengaluru</p>
                     </div>
 
-                    <div class="vision-glass p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-white">Diploma in Computer Applications (DCA)</h4>
+                    <div class="vision-glass p-5 sm:p-6">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
+                            <h4 class="text-lg sm:text-xl font-bold text-white">Diploma in Computer Applications (DCA)</h4>
                             <span class="text-xs px-3 py-1 bg-white/10 text-gray-300 rounded-full font-semibold">2019 - 2020</span>
                         </div>
-                        <p class="text-gray-300 text-sm">IECT, Port Blair</p>
+                        <p class="text-gray-300 text-xs sm:text-sm">IECT, Port Blair</p>
                     </div>
                 </div>
             </div>
 
             <!-- Certifications Grid -->
             <div class="gs-reveal">
-                <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">05. Credentials</h3>
-                <h2 class="text-3xl font-bold tracking-tight text-gradient mb-8">Training & Certifications</h2>
+                <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">05. Credentials</h3>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gradient mb-8">Training & Certifications</h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="vision-glass p-5">
@@ -532,18 +531,18 @@
     </section>
 
     <!-- SECTION 06: Dedicated Contact Section -->
-    <section id="contact" class="relative z-10 py-24 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-20">
-        <div class="mb-12 gs-reveal">
-            <h3 class="text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">06. Connect</h3>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gradient">Get In Touch</h2>
+    <section id="contact" class="relative z-10 py-16 sm:py-24 px-3 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
+        <div class="mb-8 sm:mb-12 gs-reveal">
+            <h3 class="text-xs sm:text-sm font-semibold tracking-widest text-appleBlue uppercase mb-2">06. Connect</h3>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient">Get In Touch</h2>
         </div>
 
-        <div class="vision-glass tilt-card p-6 sm:p-8 md:p-12 w-full gs-reveal">
+        <div class="vision-glass tilt-card p-5 sm:p-8 md:p-12 w-full gs-reveal">
             <div class="glare"></div>
             <div class="relative z-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Let's build reliable networks & solutions together.</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Let's build reliable networks & solutions together.</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                         Whether you are looking to hire for Network Operations, LAN/WAN infrastructure delivery, or web application development, feel free to reach out directly.
                     </p>
 
@@ -591,14 +590,14 @@
     </section>
 
     <!-- macOS Floating Dock Footer -->
-    <div class="relative z-10 w-full flex justify-center pb-8 gs-reveal">
-        <div class="mac-dock px-7 py-4 flex items-center gap-6">
-            <a href="https://github.com/JOYPRO25" target="_blank" rel="noopener noreferrer" class="dock-icon text-gray-300 hover:text-white text-2xl" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/joice-raj-67a200252?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="dock-icon text-gray-300 hover:text-[#0A66C2] text-2xl" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <div class="w-px h-7 bg-white/20"></div>
-            <a href="mailto:joiceraj25@gmail.com" class="dock-icon text-gray-300 hover:text-appleBlue text-2xl" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <button onclick="toggleNeuralHUD()" class="dock-icon text-appleBlue text-2xl" title="Neural Pitch AI"><i class="fa-solid fa-brain"></i></button>
-            <a href="K_Joice_Raj_Resume.pdf" download class="dock-icon text-emerald-400 text-2xl" title="Download CV"><i class="fa-solid fa-file-pdf"></i></a>
+    <div class="relative z-10 w-full flex justify-center pb-8 gs-reveal px-2">
+        <div class="mac-dock px-5 sm:px-7 py-3 sm:py-4 flex items-center gap-4 sm:gap-6">
+            <a href="https://github.com/JOYPRO25" target="_blank" rel="noopener noreferrer" class="dock-icon text-gray-300 hover:text-white text-xl sm:text-2xl" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/joice-raj-67a200252?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="dock-icon text-gray-300 hover:text-[#0A66C2] text-xl sm:text-2xl" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <div class="w-px h-6 bg-white/20"></div>
+            <a href="mailto:joiceraj25@gmail.com" class="dock-icon text-gray-300 hover:text-appleBlue text-xl sm:text-2xl" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <button onclick="toggleNeuralHUD()" class="dock-icon text-appleBlue text-xl sm:text-2xl" title="Neural Pitch AI"><i class="fa-solid fa-brain"></i></button>
+            <a href="K_Joice_Raj_Resume.pdf" download class="dock-icon text-emerald-400 text-xl sm:text-2xl" title="Download CV"><i class="fa-solid fa-file-pdf"></i></a>
         </div>
     </div>
 
@@ -609,7 +608,7 @@
 
     <!-- VisionOS Neural Pitch AI Overlay Modal -->
     <div id="neural-hud" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-2xl flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95">
-        <div class="vision-glass p-8 md:p-10 max-w-2xl w-full relative border border-white/20 shadow-2xl">
+        <div class="vision-glass p-6 sm:p-10 max-w-2xl w-full relative border border-white/20 shadow-2xl">
             <!-- Close Button -->
             <button onclick="toggleNeuralHUD()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
                 <i class="fa-solid fa-xmark"></i>
@@ -621,52 +620,53 @@
                     <i class="fa-solid fa-brain animate-pulse"></i>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-white tracking-tight">VisionOS Neural Pitch Agent</h3>
+                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">VisionOS Neural Pitch Agent</h3>
                     <p class="text-xs text-appleBlue font-mono">INTELLIGENCE MODE :: PROFILE K_JOICE_RAJ</p>
                 </div>
             </div>
 
-            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                 Select a command query below to trigger an instant neural summary regarding Joice's profile for recruiters:
             </p>
 
             <!-- Quick Action Chips -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                <button onclick="triggerPitch('pitch')" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
-                    <p class="text-white text-sm font-semibold group-hover:text-appleBlue">⚡ 30-Sec Recruiter Pitch</p>
-                    <p class="text-gray-400 text-xs mt-1">Core summary of IT Ops & Dev skills.</p>
+                <button onclick="triggerPitch('pitch')" class="p-3.5 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
+                    <p class="text-white text-xs sm:text-sm font-semibold group-hover:text-appleBlue">⚡ 30-Sec Recruiter Pitch</p>
+                    <p class="text-gray-400 text-[11px] sm:text-xs mt-1">Core summary of IT Ops & Dev skills.</p>
                 </button>
 
-                <button onclick="triggerPitch('infra')" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
-                    <p class="text-white text-sm font-semibold group-hover:text-appleBlue">🛠️ Infrastructure Audit</p>
-                    <p class="text-gray-400 text-xs mt-1">Breakdown of LAN/WAN & Enterprise Tools.</p>
+                <button onclick="triggerPitch('infra')" class="p-3.5 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
+                    <p class="text-white text-xs sm:text-sm font-semibold group-hover:text-appleBlue">🛠️ Infrastructure Audit</p>
+                    <p class="text-gray-400 text-[11px] sm:text-xs mt-1">Breakdown of LAN/WAN & Enterprise Tools.</p>
                 </button>
 
-                <button onclick="triggerPitch('projects')" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
-                    <p class="text-white text-sm font-semibold group-hover:text-appleBlue">📊 Project Architecture</p>
-                    <p class="text-gray-400 text-xs mt-1">Firebase QR App & PMO Analytics.</p>
+                <button onclick="triggerPitch('projects')" class="p-3.5 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
+                    <p class="text-white text-xs sm:text-sm font-semibold group-hover:text-appleBlue">📊 Project Architecture</p>
+                    <p class="text-gray-400 text-[11px] sm:text-xs mt-1">Firebase QR App & PMO Analytics.</p>
                 </button>
 
-                <button onclick="triggerPitch('dispatch')" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
-                    <p class="text-white text-sm font-semibold group-hover:text-appleBlue">📩 Instant Resume Dispatch</p>
-                    <p class="text-gray-400 text-xs mt-1">Direct PDF link & contact details.</p>
+                <button onclick="triggerPitch('dispatch')" class="p-3.5 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-appleBlue/50 hover:bg-appleBlue/10 text-left transition-all group">
+                    <p class="text-white text-xs sm:text-sm font-semibold group-hover:text-appleBlue">📩 Instant Resume Dispatch</p>
+                    <p class="text-gray-400 text-[11px] sm:text-xs mt-1">Direct PDF link & contact details.</p>
                 </button>
             </div>
 
             <!-- Dynamic Output Screen -->
-            <div id="hud-output" class="p-4 rounded-xl bg-black/60 border border-white/10 text-gray-300 text-sm font-mono min-h-[100px] flex items-center justify-center text-center">
+            <div id="hud-output" class="p-4 rounded-xl bg-black/60 border border-white/10 text-gray-300 text-xs sm:text-sm font-mono min-h-[100px] flex items-center justify-center text-center">
                 Select a neural prompt above to output structured candidate data.
             </div>
         </div>
     </div>
 
     <script>
-        // 1. Initialize Lenis Smooth Scroll
+        // 1. Initialize Lenis Smooth Scroll with mobile touch smoothing enabled
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
-            smoothTouch: false
+            smoothTouch: true,
+            touchMultiplier: 1.5
         });
 
         function raf(time) {
@@ -684,13 +684,13 @@
             // Un-blur and Scale-Up Reveal Transitions for Scroll
             gsap.utils.toArray('.gs-reveal').forEach((el) => {
                 gsap.fromTo(el, 
-                    { opacity: 0, y: 50, scale: 0.95, filter: "blur(10px)" },
+                    { opacity: 0, y: 40, scale: 0.97, filter: "blur(8px)" },
                     {
                         opacity: 1, y: 0, scale: 1, filter: "blur(0px)",
-                        duration: 1, ease: "power3.out",
+                        duration: 0.9, ease: "power3.out",
                         scrollTrigger: {
                             trigger: el,
-                            start: "top 88%",
+                            start: "top 90%",
                             end: "top 20%",
                             toggleActions: "play none none reverse"
                         }
@@ -698,30 +698,32 @@
                 );
             });
 
-            // 3D Card Tilt Effect
-            const cards = document.querySelectorAll('.tilt-card');
-            cards.forEach(card => {
-                const glare = card.querySelector('.glare');
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    const rotateX = ((y - centerY) / centerY) * -4; 
-                    const rotateY = ((x - centerX) / centerX) * 4;
-                    
-                    gsap.to(card, { rotationX: rotateX, rotationY: rotateY, transformPerspective: 1000, ease: "power1.out", duration: 0.4 });
-                    if(glare) {
-                        const percentX = (x / rect.width) * 100;
-                        const percentY = (y / rect.height) * 100;
-                        glare.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(255,255,255,0.18), transparent 50%)`;
-                    }
+            // 3D Card Tilt Effect (Only active on desktop pointers to prevent mobile glitches)
+            if (window.matchMedia("(hover: hover)").matches) {
+                const cards = document.querySelectorAll('.tilt-card');
+                cards.forEach(card => {
+                    const glare = card.querySelector('.glare');
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = ((y - centerY) / centerY) * -4; 
+                        const rotateY = ((x - centerX) / centerX) * 4;
+                        
+                        gsap.to(card, { rotationX: rotateX, rotationY: rotateY, transformPerspective: 1000, ease: "power1.out", duration: 0.4 });
+                        if(glare) {
+                            const percentX = (x / rect.width) * 100;
+                            const percentY = (y / rect.height) * 100;
+                            glare.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(255,255,255,0.18), transparent 50%)`;
+                        }
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        gsap.to(card, { rotationX: 0, rotationY: 0, ease: "power3.out", duration: 0.8 });
+                    });
                 });
-                card.addEventListener('mouseleave', () => {
-                    gsap.to(card, { rotationX: 0, rotationY: 0, ease: "power3.out", duration: 0.8 });
-                });
-            });
+            }
 
             // Scroll Progress Line
             window.addEventListener("scroll", () => {
@@ -740,14 +742,14 @@
         // Neural Pitch Output Responses
         function triggerPitch(type) {
             const output = document.getElementById('hud-output');
-            output.className = "p-4 rounded-xl bg-black/60 border border-appleBlue/40 text-gray-200 text-sm font-sans text-left leading-relaxed";
+            output.className = "p-4 rounded-xl bg-black/60 border border-appleBlue/40 text-gray-200 text-xs sm:text-sm font-sans text-left leading-relaxed";
             
             if (type === 'pitch') {
                 output.innerHTML = "<strong>EXECUTIVE SUMMARY:</strong> K Joice Raj is a Bengaluru-based Network Operations Representative at 2COMS (working for Accenture Solutions). BCA graduate from REVA University (2024). Combines enterprise LAN/WAN provisioning, NTU deployments, and network troubleshooting with modern frontend developer skills in HTML, JS, Tailwind, and Firebase DB.";
             } else if (type === 'infra') {
                 output.innerHTML = "<strong>INFRASTRUCTURE PROFILE:</strong> Experienced in TCP/IP, DNS, DHCP, Routing & Switching. Daily hands-on utilization of enterprise suites including G-Designer, Remedy, Force, and Citrix platforms for provisioning and service delivery.";
             } else if (type === 'projects') {
-                output.innerHTML = "<strong>PROJECT HIGHLIGHTS:</strong><br>• <em>QR Attendance App:</em> Firebase DB real-time web application.<br>• <em>PMO Dashboard:</em> Power Query, custom VBA macros, TAT metric analytics.<br>• <em>APEX Tool:</em> Open-source AI generative image rendering tool.";
+                output.innerHTML = "<strong>PROJECT HIGHLIGHTS:</strong><br>• <em>QR Attendance App:</em> Firebase DB real-time web application.<br>• <em>PMO Dashboard:</em> Power Query, custom VBA macros, TAT metric analytics.<br>• <i>APEX Tool:</i> Open-source AI generative image rendering tool.";
             } else if (type === 'dispatch') {
                 output.innerHTML = "<strong>CONTACT DISPATCH:</strong><br>• Direct Email: <a href='mailto:joiceraj25@gmail.com' class='text-appleBlue underline'>joiceraj25@gmail.com</a><br>• Phone: +91 8050025064<br>• Links: Available in the footer dock.";
             }
